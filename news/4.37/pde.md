@@ -57,7 +57,22 @@ After that just run your tests as the usual plugin test, you can find an example
 ## API Tools
 -->
 
-<!--
----
-## PDE Compiler 
--->
+
+## PDE Compiler
+<details>
+<summary>Contributors</summary>
+
+- [Gireesh Punathil ](https://github.com/gireeshpunathil)
+- [Neha Burnwal ](https://github.com/nburnwal09)
+
+</details>
+
+Quick fix added for correcting invalid header names in the `MANIFEST.MF` file. It automatically sanitizes header names by removing any characters other than alphanumeric `(A–Z, a–z, 0–9)`, hyphen `(-)`, and underscore `(_)`.
+
+![Invalid characters check in manifest](images/invalidCharactersCheck.png)
+
+Additionally, the quick fix ensures proper formatting by inserting a space between the header name and the colon `(:)` if one is missing.
+
+![Quick fix to add a space](images/spaceCheckBeforeColon.png)
+
+The quick fix labeled as `Remove invalid characters from header`. Once user clicks on `Finish`, it updates the header. This quick fix is added to enhance user experience.
